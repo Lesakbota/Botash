@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Фильм ұсыным жүйесі</title>
+</head>
+<body>
+    <h1>Сүйікті фильміңізді енгізіңіз</h1>
+    <form method="post">
+        <input type="text" name="title" placeholder="Мысалы: Toy Story (1995)">
+        <input type="submit" value="Ұсыну">
+    </form>
+    {% if recommendations %}
+        <h2>Ұсынылған фильмдер:</h2>
+        <ul>
+            {% for film in recommendations %}
+                <li>{{ film }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
